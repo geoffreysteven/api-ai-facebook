@@ -74,7 +74,7 @@ function processEvent(event) {
                     var splittedText = splitResponse(responseText);
 
                     async.eachSeries(splittedText, (textPart, callback) => {
-                        sendFBMessage(sender, {text: textPart}, callback);
+//                         sendFBMessage(sender, {text: textPart}, callback);
 //                     });
 //                     async.eachSeries(splittedText, (textPart, callback) => {
                     sendFBMessage(sender, { "message":{
