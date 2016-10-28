@@ -27,8 +27,8 @@ function processEvent(event) {
         if (!sessionIds.has(sender)) {
             sessionIds.set(sender, uuid.v1());
         }
-
-        console.log("Text", text);
+        text = "GSS - " + text;
+        console.log("Text AIVRE :", text);
 
         let apiaiRequest = apiAiService.textRequest(text,
             {
