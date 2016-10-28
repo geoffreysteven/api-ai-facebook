@@ -75,7 +75,8 @@ function processEvent(event) {
 
                     async.eachSeries(splittedText, (textPart, callback) => {
                         sendFBMessage(sender, {text: textPart}, callback);
-                    });
+//                     });
+//                     async.eachSeries(splittedText, (textPart, callback) => {
                     sendFBMessage(sender, { "message":{
                                                 "attachment":{
                                                      "type":"image",
@@ -84,9 +85,9 @@ function processEvent(event) {
                                                                   }
                                                              }
                                                        }
-                                          } , callback)
-
-
+                                          } , callback);
+                    });
+    
                 }
 
             }
