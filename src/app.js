@@ -79,10 +79,10 @@ function processEvent(event) {
 //                     async.eachSeries(splittedText, (textPart, callback) => {
                     // sendFBMessage(sender, { text: textPart}, callback); });
     
-                    sendFBMessage(sender, { "attachment": 
-											{"type":"image", "payload":
-												{ "url":"https://thinkexponential.files.wordpress.com/2013/02/think-exponential.png"
-                                                        }}}, callback); });
+        sendFBMessage(sender, { "attachment": 
+								{"type":"image", "payload":
+									{ "url":"https://en.wikipedia.org/wiki/Serengeti_National_Park#/media/File:A_group_of_lions_on_the_tree_in_the_Serengeti_prairies.jpg"
+                                            }}}, callback); });
 	
                 }
 
