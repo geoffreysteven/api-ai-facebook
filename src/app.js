@@ -27,8 +27,7 @@ function processEvent(event) {
         if (!sessionIds.has(sender)) {
             sessionIds.set(sender, uuid.v1());
         }
-        text = "GSS - " + text;
-        console.log("Text AIVRE :", text);
+        console.log("To   AIVRE:", text);
 
         let apiaiRequest = apiAiService.textRequest(text,
             {
@@ -66,9 +65,12 @@ function processEvent(event) {
                         });
                     }
                 } else if (isDefined(responseText)) {
-                    console.log('Response as text message');
+                    console.log("From AIVRE:", text);
+//                     console.log('Response as text message');
                     // facebook API limit for text length is 320,
                     // so we must split message if needed
+                    responseText = "AIVRE: " + responseText;
+                    
                     var splittedText = splitResponse(responseText);
 
                     async.eachSeries(splittedText, (textPart, callback) => {
