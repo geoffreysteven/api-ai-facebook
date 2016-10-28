@@ -77,14 +77,13 @@ function processEvent(event) {
 //                         sendFBMessage(sender, {text: textPart}, callback);
 //                     });
 //                     async.eachSeries(splittedText, (textPart, callback) => {
-                    sendFBMessage(sender, { text: textPart,
-                                            "attachment": 
-                                             {"type":"image",
-                                                     "payload":{
-                                                    "url":"https://thinkexponential.files.wordpress.com/2013/02/think-exponential.png"
-                                                      }}} , callback);
-                    });
+                    sendFBMessage(sender, { text: textPart}, callback); });
     
+                    sendFBMessage(sender, { "attachment": 
+											{"type":"image", "payload":
+												{ "url":"https://thinkexponential.files.wordpress.com/2013/02/think-exponential.png"
+                                                        }}}, callback); });
+	
                 }
 
             }
