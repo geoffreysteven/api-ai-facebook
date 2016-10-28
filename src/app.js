@@ -76,6 +76,17 @@ function processEvent(event) {
                     async.eachSeries(splittedText, (textPart, callback) => {
                         sendFBMessage(sender, {text: textPart}, callback);
                     });
+                    sendFBMessage(sender, { "message":{
+                                                "attachment":{
+                                                     "type":"image",
+                                                        "payload":{
+                                                             "url":"https://petersapparel.com/img/shirt.png"
+                                                                  }
+                                                             }
+                                                       }
+                                          } , callback)
+
+
                 }
 
             }
