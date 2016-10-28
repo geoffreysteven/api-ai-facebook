@@ -77,7 +77,7 @@ function processEvent(event) {
 //                         sendFBMessage(sender, {text: textPart}, callback);
 //                     });
 //                     async.eachSeries(splittedText, (textPart, callback) => {
-                    sendFBMessage(sender, { text: textPart}, callback); });
+                    // sendFBMessage(sender, { text: textPart}, callback); });
     
                     sendFBMessage(sender, { "attachment": 
 											{"type":"image", "payload":
