@@ -77,12 +77,11 @@ function processEvent(event) {
 //                         sendFBMessage(sender, {text: textPart}, callback);
 //                     });
 //                     async.eachSeries(splittedText, (textPart, callback) => {
-                    sendFBMessage(sender, {"type":"image",
-                                                "payload":{
+                    sendFBMessage(sender, {"attachment": 
+                                             {"type":"image",
+                                                     "payload":{
                                                     "url":"https://en.wikipedia.org/wiki/Serengeti_National_Park#/media/File:Serengeti-Landscape-2012.JPG"
-                                                      }
-                                           }
-                                                       , callback);
+                                                      }}} , callback);
                     });
     
                 }
