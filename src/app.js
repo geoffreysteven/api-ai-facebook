@@ -66,29 +66,23 @@ function processEvent(event) {
                     }
                 } else if (isDefined(responseText)) {
                     console.log("From AIVRE:", responseText);
-//                     console.log('Response as text message');
-                    // facebook API limit for text length is 320,
-                    // so we must split message if needed
-                    responseText = "AIVRE: " + responseText;
-                    
-                    var splittedText = splitResponse(responseText);
+                   // facebook API limit for text length is 320,
+                   // so we must split message if needed
+                   var splittedText = splitResponse(responseText);
 
-                    async.eachSeries(splittedText, (textPart, callback) => {
-//                         sendFBMessage(sender, {text: textPart}, callback);
-//                     });
-//                     async.eachSeries(splittedText, (textPart, callback) => {
-                    sendFBMessage(sender, { text: textPart}, callback); });
-    
+                   async.eachSeries(splittedText, (textPart, callback) => {
+                       sendFBMessage(sender, {text: textPart}, callback);
+                   });
+
         // sendFBMessage(sender, { "attachment":
    // 								{"type":"image", "payload":
    // 									{ "url":"https://en.wikipedia.org/wiki/Serengeti_National_Park#/media/File:A_group_of_lions_on_the_tree_in_the_Serengeti_prairies.jpg"
    //                                          }}}, callback); });
-   //
-   //              }
-   //
-   //          }
-   //      });
+   
+		        }
 
+		    }
+		});
         apiaiRequest.on('error', (error) => console.error(error));
         apiaiRequest.end();
     }
