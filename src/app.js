@@ -131,7 +131,7 @@ function sendFBMessage(sender, messageData, callback) {
             recipient: {id: sender},
             message: messageData
         }
-        console.log("sendFBMessage sender: " + sender + " Data: " + messageData);
+        console.log("sendFBMessage sender: ", json);
     }, (error, response, body) => {
         if (error) {
             console.log('Error sending message: ', error);
@@ -155,7 +155,7 @@ function sendFBSenderAction(sender, action, callback) {
                 recipient: {id: sender},
                 sender_action: action
             }
-            console.log("sendFBSenderAction sender: " + sender + " Data: " + action);
+            console.log("sendFBSenderAction sender: ", json);
         }, (error, response, body) => {
             if (error) {
                 console.log('Error sending action: ', error);
