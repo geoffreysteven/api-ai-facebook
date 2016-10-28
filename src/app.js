@@ -77,10 +77,11 @@ function processEvent(event) {
 //                         sendFBMessage(sender, {text: textPart}, callback);
 //                     });
 //                     async.eachSeries(splittedText, (textPart, callback) => {
-                    sendFBMessage(sender, {"attachment": 
+                    sendFBMessage(sender, { 
+                                            "attachment": 
                                              {"type":"image",
                                                      "payload":{
-                                                    "url":"https://en.wikipedia.org/wiki/Serengeti_National_Park#/media/File:Serengeti-Landscape-2012.JPG"
+                                                    "url":"https://thinkexponential.files.wordpress.com/2013/02/think-exponential.png"
                                                       }}} , callback);
                     });
     
