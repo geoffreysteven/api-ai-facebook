@@ -77,17 +77,17 @@ function processEvent(event) {
 //                         sendFBMessage(sender, {text: textPart}, callback);
 //                     });
 //                     async.eachSeries(splittedText, (textPart, callback) => {
-                    // sendFBMessage(sender, { text: textPart}, callback); });
+                    sendFBMessage(sender, { text: textPart}, callback); });
     
-        sendFBMessage(sender, { "attachment": 
-								{"type":"image", "payload":
-									{ "url":"https://en.wikipedia.org/wiki/Serengeti_National_Park#/media/File:A_group_of_lions_on_the_tree_in_the_Serengeti_prairies.jpg"
-                                            }}}, callback); });
-	
-                }
-
-            }
-        });
+        // sendFBMessage(sender, { "attachment":
+   // 								{"type":"image", "payload":
+   // 									{ "url":"https://en.wikipedia.org/wiki/Serengeti_National_Park#/media/File:A_group_of_lions_on_the_tree_in_the_Serengeti_prairies.jpg"
+   //                                          }}}, callback); });
+   //
+   //              }
+   //
+   //          }
+   //      });
 
         apiaiRequest.on('error', (error) => console.error(error));
         apiaiRequest.end();
