@@ -80,7 +80,7 @@ function processEvent(event) {
                                                 "attachment":{
                                                      "type":"image",
                                                         "payload":{
-                                                             "url":"https://petersapparel.com/img/shirt.png"
+                                                             "url":"https://en.wikipedia.org/wiki/Serengeti_National_Park#/media/File:Serengeti-Landscape-2012.JPG"
                                                                   }
                                                              }
                                                        }
