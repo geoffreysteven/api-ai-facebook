@@ -138,8 +138,8 @@ function sendFBMessage(sender, messageData, callback) {
         } else if (response.body.error) {
             console.log('Error: ', response.body.error);
         }
-        console.log("sendFBMessage sender: ", sender);
-        console.log("sendFBMessage data  : ", messageData);
+//         console.log("sendFBMessage sender: ", sender);
+//         console.log("sendFBMessage data  : ", messageData);
         if (callback) {
             callback();
         }
@@ -163,8 +163,8 @@ function sendFBSenderAction(sender, action, callback) {
             } else if (response.body.error) {
                 console.log('Error: ', response.body.error);
             }
-            console.log("sendFBSenderAction sender: ", sender);
-            console.log("sendFBSenderAction data  : ", action);
+//             console.log("sendFBSenderAction sender: ", sender);
+//             console.log("sendFBSenderAction data  : ", action);
             if (callback) {
                 callback();
             }
